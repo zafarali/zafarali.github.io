@@ -1,0 +1,20 @@
+/*
+    Document   : style.css
+    Created on : 2014-04-11 07:36 AM
+    Author     : zafarali
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+*{
+    padding:0;
+    margin:0 auto;
+    font-family: Courier;
+}
+li{
+    padding-top:3%;
+}
+h3{
+    padding-top:3%;
+}
