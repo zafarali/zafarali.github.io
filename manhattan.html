@@ -7,15 +7,26 @@ To change this template use Tools | Templates.
     <title></title>
     <script>
     var manhattan = function(){
-        var current=document.getElementById("curr").getAttribute("value");
-        var target = document.getElementById("goal").getAttribute("value");
+        var current=document.getElementById("curr").getAttribute("value"),
+            target = document.getElementById("goal").getAttribute("value"),
+            distance = 0;
         
-        output(current+""+target);
+        currentVector = current.split("");
+        targetVector = target.split("");
+        for(var i = 0; i < currentVector.length;i++){
+            if(currentVector[i] == 0 || targetVector[i]==0){
+                console.log("empty");
+            }else{
+            var thisDistance = Math.abs((parseInt(currentVector[i])-parseInt(targetVector[i])));
+            console.log("comparing at "+i+": from current "+currentVector[i]+" and from target "+targetVector[i]+", man distance was: "+thisDistance);
+            distance = distance + thisDistance;
+            }
+        }
+        output(distance);
     }
     
     var generateNext = function(){
         var current = document.getElementById("curr").getAttribute("value");
-        possibles = current.split("");
         
     }
     
