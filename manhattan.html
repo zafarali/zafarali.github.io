@@ -1,0 +1,44 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script>
+    var manhattan = function(){
+        var current=document.getElementById("curr").getAttribute("value");
+        var target = document.getElementById("goal").getAttribute("value");
+        
+        output(current+""+target);
+    }
+    
+    var generateNext = function(){
+        var current = document.getElementById("curr").getAttribute("value");
+        possibles = current.split("");
+        
+    }
+    
+    var output = function(toOutput){
+     document.getElementById("output").innerHTML = toOutput
+    
+    }
+    </script>
+</head>
+<body>
+Current Board: <input type="text" id="curr" value="213540678"><br />
+Goal Board: <input type="text" id="goal" value="123456780">
+    
+    <button onclick="manhattan()">
+        Find Manhattan Distance
+    </button>
+    <button onclick="void()">
+        generate next possible board
+    </button>
+    <br /><div style="min-width:50px; border:1px solid black;">
+    Output:<div id="output">
+    </div>
+    </div>
+    </div>
+</body>
+</html>
