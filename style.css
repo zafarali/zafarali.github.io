@@ -7,14 +7,41 @@
     To change this template use Tools | Templates.
 */
 
-*{
+* {
     padding:0;
     margin:0 1% 0 1%;
-    font-family: Courier;
+    font-family: 'Raleway', Helvetica, sans-serif;
 }
-li{
+p {
+    font-family:Georgia, sans-serif;
+}
+li {
     padding-top:3%;
 }
-h3{
+li.head {
+    list-style-type: none;
+    display: inline-block;
+}
+li.head.name{
+    width:inherit;
+/*         -moz-transition:0.1s width ease-in-out;
+     -webkit-transition: 0.1s width ease-in-out;
+           -o-transition:0.1s width ease-in-out;
+              transition:0.1s width ease-in-out;*/
+}
+
+#header {
+    padding-bottom:4px;
+    border-bottom-style: inset;
+}
+#main {
+    margin-top:5px;
+    margin-right:20px;
+    margin-left:12px;
+}
+body {
+    padding-right:0;
+}
+h3 {
     padding-top:3%;
 }

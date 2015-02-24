@@ -1,4 +1,7 @@
 - var links = {'HOME': 'index.html', 'ABOUT': 'about.html', 'LEARNING':'learning.html', 'PROJECTS': 'projects.html'}
 ul
+	li.head.name
+		|ZAFARALI AHMED
 	each href, title in links
-		a(href=href)= title
+		li.head
+			a(href=href)= title
