@@ -1,17 +1,10 @@
 extends ./layout.jade
-
 block content
 	#hero
 		#left
-			h1 quantitative biology
-			h1 computer science
-			h1 mathematics
-			h1 hacker
-			h1 cook
-			h1 urban geography
-			h1 data scientist
-			h1 sleep enthusiast
+			- var herolinks = {'quantitative scientist': 'about.html', 'hacker': 'projects.html', 'casual cook': 'cook.html', 'sleep enthusiast': 'sleep.html' }
+			each href, title in herolinks
+				h1
+					a(href=href)= title
 		#mid
 			img(src="./assets/portrait.jpeg")#propic
-		#right
-			h1 more stuff
