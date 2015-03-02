@@ -24,14 +24,16 @@ body {
 p {
     text-align: left;
     font-family: 'Raleway', Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
-#subtext {
+.subtext {
     padding-top: 15px;
     font-size: 1.2em;
+    text-align: left;
 }
 li {
     padding-top:3%;
+    font-weight: 300;
 }
 
 a:hover{
@@ -40,7 +42,7 @@ a:hover{
 li.head {
     list-style-type: none;
     display: inline-block;
-    font-weight: 900;
+    font-weight: 300;
 }
 li.head a, li.head a:visited {
     color:#6cbb27;
@@ -63,13 +65,21 @@ li.head.name{
     margin-right:20px;
     margin-left:12px;
 }
+
+#main #left, #main #right, #main #center{
+    display: inline-block;
+    width:300px;
+    float:top;
+}
 #hero {
     text-align: right;
     padding-top: 65px;
 }
 #hero h1 {
-    width:300px;
+    width:100%;
     padding:2px;
+    font-size:3em;
+    font-weight: 400;
 }
 #hero h1 a, #hero h1 a:visited {
     padding: 1px;
@@ -88,10 +98,21 @@ li.head.name{
     vertical-align: middle;
     display:inline-block;
 }
-
+#hero #left{
+    width:70%;
+}
+#hero #center{
+    width:25%;
+}
+h2 {
+    padding-top: 3%;
+    font-size:1.75em;
+}
 h3 {
     padding-top:3%;
+    font-size:1.5em;
 }
+li {}
 #propic {
     border-radius: 50%;
     width:200px;
