@@ -2,7 +2,7 @@ extends ./layout.jade
 block content
 	#hero
 		#left
-			- var herolinks = {'quantitative scientist': 'about.html', 'hacker': 'projects.html'}
+			- var herolinks = {'quantitative scientist': '#', 'hacker': 'projects.html'}
 			each href, title in herolinks
 				h1
 					a(href=href)= title
@@ -15,7 +15,7 @@ block content
 			| I consider myself a
 			b multipotentialite. 
 		p.subtext
-			| Ever since I was a kid, I've always wanted to know more about the world. Coming to university I was armed
+			| Ever since I was a kid, I've always wanted to know more about the world. At university I have been
 			| with the tools to actually
 			i predict
 			| the world.
