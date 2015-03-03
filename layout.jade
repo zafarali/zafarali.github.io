@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+include ./mixins.jade
+	head
+		title Zafarali Ahmed
+		link(href='style.css', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Raleway:700,400,300', rel='stylesheet', type='text/css')
+	body
+		#header
+			include ./head.jade
+		#main
+			block content
