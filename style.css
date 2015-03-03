@@ -112,6 +112,10 @@ h3 {
     padding-top:3%;
     font-size:1.5em;
 }
+h4 {
+    padding-top: 3%;
+    font-size:1.20em;
+}
 li {}
 #propic {
     border-radius: 50%;
@@ -127,6 +131,9 @@ li {}
               transition:0.1s filter ease-in-out;*/
 }
 
+#fullwidth {
+    width:100%;
+}
 /*#propic:hover{
     filter:grayscale(0);
     -webkit-filter:grayscale(0);
