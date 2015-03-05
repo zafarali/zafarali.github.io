@@ -79,7 +79,7 @@ li.head.name{
 #hero h1 {
     width:100%;
     padding:2px;
-    font-size:3em;
+    font-size:2.75em;
     font-weight: 400;
 }
 #hero h1 a, #hero h1 a:visited {
@@ -131,7 +131,9 @@ li {}
            -o-transition:0.1s filter ease-in-out;
               transition:0.1s filter ease-in-out;*/
 }
-
+#hero .subtext {
+    text-align: center;
+}
 #fullwidth {
     width:100%;
 }
