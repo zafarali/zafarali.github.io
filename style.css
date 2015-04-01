@@ -72,6 +72,10 @@ li.head.name{
     width:300px;
     float:top;
 }
+.blk {
+    display: block;
+    width:100%;
+}
 #hero {
     text-align: right;
     padding-top: 65px;
