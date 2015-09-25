@@ -1,0 +1,19 @@
+# Site settings
+title:              Zafs Portfolio
+email:              zafarali.ahmed@gmail.com
+description:        "A location to display all my projects"
+url:                "http://localhost:4000"
+baseurl:            ''
+
+# File structure settings
+image_path:         /public/images
+
+# Build settings
+markdown:           kramdown
+permalink:          pretty
+
+# Collection definitions and settings
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/

@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <title>Zafarali Ahmed</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <div id="header">
-    <ul id="headlinks">
-      <li class="head name">ZAFARALI AHMED</li>
-      <li class="head"><a href="index.html">HOME</a></li>
-      <li class="head"><a href="about.html">ABOUT</a></li>
-      <li class="head"><a href="links.html">LINKS</a></li>
-      <li class="head"><a href="learning.html">LEARNING</a></li>
-      <li class="head"><a href="projects.html">PROJECTS</a></li>
-      <li class="head"><a href="./assets/cv.pdf">CV</a></li>
-    </ul>
-  </div>
-  <div id="main">
-    <div id="hero">
-      <div id="left">
-        <h1><a href="#">quantitative scientist</a></h1>
-        <h1><a href="projects.html">hacker</a></h1>
-      </div>
-      <div id="center"><img src="./assets/portrait.jpeg" id="propic"></div>
-      <p class="subtext"><b>McGill University. Quantitative Biology, Mathematics and Computer Science.</b><b>Data Driven Decision Making.</b></p>
-    </div>
-  </div>
-</body>
+---
+layout: main
+title: Portfolio
+---
+
+<main id="portfolio">
+	<h1 class="page-header">Portfolio</h1>
+	<section>
+		<ul id="portfolio-gallery">
+			{% for project in site.projects %}
+				<li>
+					<a href="{{ site.baseurl }}{{ project.url }}">
+						<img src="./{{ site.image_path }}/{{ project.image }}">
+						<h2>{{ project.title }}</h2>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+</main>
