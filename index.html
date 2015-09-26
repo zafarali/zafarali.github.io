@@ -6,25 +6,25 @@ title: Portfolio
 <main id="portfolio" class="portfolio">
 	<h1 class="page-header"></h1>
 	<section class="row">
-		<div class="col-md-12 col-lg-10 col-lg-offset-1">
-			<ul id="portfolio-gallery">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 portfolio-holder">
 				{% for project in site.projects %}
-					<div class="portfolio-item {{project.tag}}" style="background-image:url({{ site.image_path }}{{ project.image }})">
-						<a href="{{ site.baseurl }}{{ project.url }}">
-							<div class="portfolio-contents">
-								<div class="portfolio-title">
-									{{ project.title }}
-								</div>
+					<div class="portfolio-item item-tag-{{project.tag}}">
+						{% if project.externallink %}
+						<a href="{{ project.externallink }}">
+						{% else %}
+						<a href="{{ project.url }}">
+						{% endif %}
+							<div class="portfolio-contents" style="background-image:url({{ site.image_path }}{{ project.image }})">
 								<div class="portfolio-tag tag-{{project.tag}}">
 									{{project.tag}}
 								</div>
 							</div>
+							<div class="portfolio-title">
+								{{ project.title }}
+							</div>
 						</a>
-							<!-- <h3>{{ project.summary }}</h3>
-							<small>{{ project.tag  }}</small> -->
 					</div>
 				{% endfor %}
-			</ul>
 		</div>
 	</section>
 </main>

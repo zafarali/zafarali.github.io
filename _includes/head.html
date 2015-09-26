@@ -9,6 +9,7 @@
 	<title>{{ site.title }}</title>
 
     <link href="{{site.baseurl}}public/stylesheets/bootstrap.min.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css">
 	<!-- <link rel="icon" type="image/png" href="{{ site.baseurl }}/public/images/msr-student-template-favicon.png"> -->
 
 	<!-- <link rel="stylesheet" href="{{ site.baseurl }}public/stylesheets/style.css"> -->
@@ -16,13 +17,32 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="{{site.baseurl}}public/scripts/bootstrap.min.js"></script>
 	<style>
+	body{
+		background-color: #fafafa;
+		font-family: 'Raleway', Helvetica, sans-serif;
+		color:#333333;
+	}
+	a {
+		color:#417B0E;
+	}
+	a:hover{
+		color:#6cbb27;
+	}
+
+	.portfolio-holder{
+		/*display:r;*/
+	}
 	.portfolio-item {
-	    margin-bottom: 25px;
+		/*display:table-cell;	*/
+	    /*margin-bottom: 25px;*/
+	    margin:0;
+	    padding:0;
 	    display:inline-block;
-		min-width: 150px;
-		min-height: 150px;
-		max-width: 150px;
-		max-height: 150px;
+		min-width: 152px;
+		min-height: 250px;
+		max-width: 152px;
+		max-height: 250px;
+		border:1px solid rgba(0,0,0,0);
 	}
 
 	.portfolio-contents{
@@ -34,7 +54,8 @@
 	}
 
 	.portfolio-title{
-		min-height: 130px;
+		padding:3px;
+		/*min-height: 130px;*/
 	}
 
 	.portfolio-item *, .portfolio-item *:hover, .portfolio-item *:visited{
@@ -43,6 +64,8 @@
 
 
 	.portfolio-contents .portfolio-tag{
+		padding-left: 2px;
+		padding-right:2px;
 		color:white;
 		/*background-color: green;*/
 		float:right;
@@ -51,15 +74,8 @@
 		/*top:50px;*/
 	}
 
-	.portfolio-item:hover .portfolio-contents{
-		color:white;
-		text-decoration: none;
-	}
-
-	.portfolio-item:hover .portfolio-contents{
-		color:white;
-		text-decoration: none;
-		background-color: rgba(0,0,0,0.5);
+	.portfolio-item:hover {
+		border:1px solid #6cbb27;
 	}
 
 	.tag-data-science{
