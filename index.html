@@ -3,18 +3,28 @@ layout: main
 title: Portfolio
 ---
 
-<main id="portfolio">
-	<h1 class="page-header">Portfolio</h1>
-	<section>
-		<ul id="portfolio-gallery">
-			{% for project in site.projects %}
-				<li>
-					<a href="{{ site.baseurl }}{{ project.url }}">
-						<img src="./{{ site.image_path }}/{{ project.image }}">
-						<h2>{{ project.title }}</h2>
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
+<main id="portfolio" class="portfolio">
+	<h1 class="page-header"></h1>
+	<section class="row">
+		<div class="col-md-12 col-lg-10 col-lg-offset-1">
+			<ul id="portfolio-gallery">
+				{% for project in site.projects %}
+					<div class="portfolio-item {{project.tag}}" style="background-image:url({{ site.image_path }}{{ project.image }})">
+						<a href="{{ site.baseurl }}{{ project.url }}">
+							<div class="portfolio-contents">
+								<div class="portfolio-title">
+									{{ project.title }}
+								</div>
+								<div class="portfolio-tag tag-{{project.tag}}">
+									{{project.tag}}
+								</div>
+							</div>
+						</a>
+							<!-- <h3>{{ project.summary }}</h3>
+							<small>{{ project.tag  }}</small> -->
+					</div>
+				{% endfor %}
+			</ul>
+		</div>
 	</section>
 </main>

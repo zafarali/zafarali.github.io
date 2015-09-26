@@ -1,9 +1,9 @@
 # Site settings
-title:              Zafs Portfolio
+title:              Zafarali Ahmed
 email:              zafarali.ahmed@gmail.com
-description:        "A location to display all my projects"
+description:        "A collection of little projects and big experiences"
 url:                "http://localhost:4000"
-baseurl:            ''
+baseurl:            '/'
 
 # File structure settings
 image_path:         /public/images

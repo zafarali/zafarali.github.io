@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Project 7
-date: September 28, 2014
-image: images.jpg
+title: Project 5
+date: September 26, 2014
+image: /images.jpg
 ---
 
 ## Overview

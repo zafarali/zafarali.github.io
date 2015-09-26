@@ -1,10 +1,81 @@
 <head>
 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of little projects and big experiences">
+    <meta name="author" content="Zafarali Ahmed">
+
 
 	<title>{{ site.title }}</title>
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/public/images/msr-student-template-favicon.png">
 
-	<link rel="stylesheet" href="{{ site.baseurl }}/public/stylesheets/style.css">
+    <link href="{{site.baseurl}}public/stylesheets/bootstrap.min.css" rel="stylesheet">
+	<!-- <link rel="icon" type="image/png" href="{{ site.baseurl }}/public/images/msr-student-template-favicon.png"> -->
+
+	<!-- <link rel="stylesheet" href="{{ site.baseurl }}public/stylesheets/style.css"> -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="{{site.baseurl}}public/scripts/bootstrap.min.js"></script>
+	<style>
+	.portfolio-item {
+	    margin-bottom: 25px;
+	    display:inline-block;
+		min-width: 150px;
+		min-height: 150px;
+		max-width: 150px;
+		max-height: 150px;
+	}
+
+	.portfolio-contents{
+		color:rgba(0,0,0,0);
+		min-width: 150px;
+		min-height: 150px;
+		max-width: 150px;
+		max-height: 150px;
+	}
+
+	.portfolio-title{
+		min-height: 130px;
+	}
+
+	.portfolio-item *, .portfolio-item *:hover, .portfolio-item *:visited{
+		text-decoration: none;
+	}
+
+
+	.portfolio-contents .portfolio-tag{
+		color:white;
+		/*background-color: green;*/
+		float:right;
+		
+		position: relative;
+		/*top:50px;*/
+	}
+
+	.portfolio-item:hover .portfolio-contents{
+		color:white;
+		text-decoration: none;
+	}
+
+	.portfolio-item:hover .portfolio-contents{
+		color:white;
+		text-decoration: none;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.tag-data-science{
+		background-color: green;
+	}
+	.tag-research{
+		background-color: red;
+	}
+	.tag-software{
+		background-color: blue;
+	}
+	.tag-talks{
+		background-color: pink;
+	}
+/*	.navbar{
+		background-color:gray;
+	}*/
+	</style>`
 </head>
