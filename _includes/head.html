@@ -16,6 +16,35 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="{{site.baseurl}}public/scripts/bootstrap.min.js"></script>
+
+	<script>
+		function show_only(tagname){
+			clear_selection()
+			$('.portfolio-item:not(.item-tag-'+tagname+')').css('display', 'none');
+			$('#tag-click-'+tagname).css('font-weight', 'bold').css('text-decoration','underline');
+			$('#clear-button').css('visibility','visible');
+		}
+
+		function clear_selection(){
+			$('.portfolio-item').css('display', 'initial');
+			$('.categories a').css('font-weight', 'normal').css('text-decoration', 'none')
+			$('#clear-button').css('visibility', 'hidden');
+		}
+		// function remove_tag(tagname){
+		// 	$('.'+tagname).css('display', 'none');
+		// 	$('#showing #'+tagname).remove();
+		// }
+
+		// function add_tag(tagname){
+		// 	$('.'+tagname).css('display', 'initial');
+		// 	$('#showing').append('<a id="'+tagname+'" href="#">'+tagname+'</a>');
+		// }
+		// $(document).ready(function(){
+		// 	$('#showing').forEach(function(element){
+		// 		element.click( remove_tag(tagname) )
+		// 	})
+		// });
+	</script>
 	<style>
 	body{
 		background-color: #fafafa;
@@ -43,9 +72,9 @@
 		background-color:#417B0E;
 	}
 
-
-
-
+	#clear-button{
+		visibility:hidden;
+	}
 	.portfolio-holder{
 		/*display:r;*/
 	}
@@ -81,14 +110,22 @@
 	}
 
 
-	.portfolio-contents{
-		color:rgba(0,0,0,0);
-		min-width: 150px;
-		min-height: 150px;
-		max-width: 150px;
-		max-height: 150px;
+	.portfolio-thumbnail img{
+		/*color:rgba(0,0,0,0);*/
+		max-height: 200px;
+		min-height: 200px;
+		display: block;
+	    margin-left: auto;
+		margin-right: auto;
 	}
-
+	.portfolio-thumbnail{
+		-webkit-transition-duration: 0.25s;
+		transition-duration: 0.25s;
+	}
+	.portfolio-item:hover .portfolio-thumbnail{
+		-webkit-transform:-webkit-scale(1.1);
+		transform:scale(1.1);
+	}
 	.portfolio-title{
 		/*padding:3px;*/
 		text-align: center;
@@ -96,17 +133,12 @@
 		font-weight: normal;
 	}
 
-	.portfolio-item:hover{
-		background-color: rgba(0,0,0,0.1)
-	}
+
 	
 	.project-subtitle{
 		color:rgba(119, 119, 119,1);
 	}
 
-	/*.portfolio-item:hover .project-subtitle{
-		color:rgba(119, 119, 119,1);
-	}*/
 
 	.portfolio-item *, .portfolio-item *:hover, .portfolio-item *:visited{
 		text-decoration: none;
@@ -117,11 +149,7 @@
 		padding-left: 2px;
 		padding-right:2px;
 		color:white;
-		/*background-color: green;
-		float:right;
-		
-		position: relative;
-		/*top:50px;*/
+
 	}
 	.portfolio-tag{
 		padding-top: 10px;
@@ -129,7 +157,7 @@
 		text-align: center;
 	}
 	.portfolio-item:hover {
-		border:1px solid #6cbb27;
+		/*border:1px solid #6cbb27;*/
 	}
 	.tag-random{
 		/*nocoloryet*/
@@ -146,9 +174,21 @@
 	.tag-talks{
 		/*background-color: pink;*/
 	}
-
+	.item-tag-random{
+		display: none;
+	}
 	.page-header{
 		margin-top: 0;
+	}
+	.button-holder .btn-group{
+		float:right;
+		display:block;
+	}
+
+	.categories{
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 10px;
 	}
 /*	.navbar{
 		background-color:gray;

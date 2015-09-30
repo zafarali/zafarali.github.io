@@ -1,8 +1,12 @@
 ---
 layout: project
-title: Project 5
-date: September 26, 2014
-image: /images.jpg
+title: AngularJS Tutorial
+date: June 16, 2014
+image: /learning-angular.png
+tag: software
+subtitle: GitbHub respositiory I used to learn AngularJS to land my first software job. Now has 600+ stars.
+externallink: https://github.com/zafarali/learning-angular
+showmain: false
 ---
 
 ## Overview
