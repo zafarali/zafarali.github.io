@@ -29,9 +29,6 @@
 		color:#6cbb27;
 	}
 
-	.portfolio-holder{
-		/*display:r;*/
-	}
 	nav *{
 	    font-weight: 300;
 	    text-transform: uppercase;
@@ -46,18 +43,43 @@
 		background-color:#417B0E;
 	}
 
+
+
+
+	.portfolio-holder{
+		/*display:r;*/
+	}
+	.portfolio-list{
+		display: -webkit-flex; /*Safari */
+	    -webkit-flex-flow: row-reverse wrap;  /*Safari 6.1+ */
+	    display: flex;
+    	flex-flow: row wrap;
+   		list-style: none;
+	}
 	.portfolio-item {
-		/*display:table-cell;	*/
-	    /*margin-bottom: 25px;*/
 	    margin:0;
 	    padding:0;
-	    display:inline-block;
-		min-width: 152px;
-		min-height: 250px;
-		max-width: 152px;
-		max-height: 250px;
-		border:1px solid rgba(0,0,0,0);
+	    border:1px solid rgba(0,0,0,0);
 	}
+
+	@media screen and (min-width: 480px) {
+	    .portfolio-item {
+	        width: 50%;
+	    }
+	}
+	@media screen and (min-width: 768px) {
+	    .portfolio-item {
+	        width: 33.33%;
+	        margin-bottom: 1.5rem;
+	    }
+	}
+	@media screen and (min-width: 1280px) {
+	    .portfolio-item {
+	        width: 25%;
+	        margin-bottom: 2rem;
+	    }
+	}
+
 
 	.portfolio-contents{
 		color:rgba(0,0,0,0);
@@ -68,9 +90,23 @@
 	}
 
 	.portfolio-title{
-		padding:3px;
-		/*min-height: 130px;*/
+		/*padding:3px;*/
+		text-align: center;
+		min-height: 50px;
+		font-weight: normal;
 	}
+
+	.portfolio-item:hover{
+		background-color: rgba(0,0,0,0.1)
+	}
+	
+	.project-subtitle{
+		color:rgba(119, 119, 119,1);
+	}
+
+	/*.portfolio-item:hover .project-subtitle{
+		color:rgba(119, 119, 119,1);
+	}*/
 
 	.portfolio-item *, .portfolio-item *:hover, .portfolio-item *:visited{
 		text-decoration: none;
@@ -81,28 +117,34 @@
 		padding-left: 2px;
 		padding-right:2px;
 		color:white;
-		/*background-color: green;*/
+		/*background-color: green;
 		float:right;
 		
 		position: relative;
 		/*top:50px;*/
 	}
-
+	.portfolio-tag{
+		padding-top: 10px;
+		text-transform: uppercase;
+		text-align: center;
+	}
 	.portfolio-item:hover {
 		border:1px solid #6cbb27;
 	}
-
+	.tag-random{
+		/*nocoloryet*/
+	}
 	.tag-data-science{
-		background-color: green;
+		/*background-color: green;*/
 	}
 	.tag-research{
-		background-color: red;
+		/*background-color: red;*/
 	}
 	.tag-software{
-		background-color: blue;
+		/*background-color: blue;*/
 	}
 	.tag-talks{
-		background-color: pink;
+		/*background-color: pink;*/
 	}
 
 	.page-header{
