@@ -2,19 +2,19 @@
 layout: about
 path: /about
 url: index.html
-image: http://unsplash.it/400?random
+
 ---
+# Who is Zaf?
 
-## Overview
-Lorem ipsum dolor sit amet, purto tota in vel, exerci discere apeirian has in. Nec noster iracundia eu, utroque facilis ad has. Alii argumentum no his, omnis iusto scripta vim in, ipsum ridens mel at. Has homero phaedrum no, ea autem affert facilis usu, has possim meliore perpetua id. Errem iisque mea ex, option ocurreret no est. Sea facer ullamcorper ne, cu dictas discere repudiandae sea.
+#### *Critical thinker. Science afficianado. Urban Explorer and Multipotentialite.*
 
-His nemore audiam consequat ad, no augue choro assueverit mei. Zril offendit tincidunt ne quo. At commodo integre alienum sea, cu vocent fuisset suscipit nam. Eum ex tation omnesque adversarium, mutat autem putant te nam. Id vix facilis complectitur, vis vitae vivendo euripidis ea, fugit eirmod an vix.
 
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+Ever since I was a kid, I've always wanted to know more about the world. At university I have been
+  exposed to the tools that will actually help me to **predict** the world.
+  My current mission in life is to learn everything about [data driven decision making.](https://github.com/zafarali/explore-intelligence)
 
-Mel magna discere in. Mea ea dicit homero perfecto. Eam nulla facete scribentur in. Vide volutpat laboramus est cu, usu cu impetus dignissim. Ex pro decore impetus. Ius nihil iisque deterruisset an, ex sanctus verterem his. Doming prompta insolens est ut.
+I am a casual cook, and known for the best [Sri Lankan Parippu](https://www.google.ca/search?espv=2&amp;rlz=1C5CHFA_enLK523LK523&amp;q=sri+lankan+parippu&amp;oq=sri+lankan+parippu&amp;gs_l=serp.3..0i7i30l2j0j0i7i30j0l4j0i30j0i5i30.2632.3786.0.3967.11.11.0.0.0.1.130.966.9j2.11.0.msedr...0...1c.1.62.serp..1.10.896.WoOXrLaTM7E) at McGill.
 
-### Research interests
-* Interest 1
-* Interest 2
-* Interest 3
+I like to run and occasionally take [photographs](https://www.flickr.com/photos/zafarali).
+
+I am [Sri Lankan](https://www.google.ca/maps/place/Sri+Lanka) and currently live in [Montr&eacute;al.](https://www.google.ca/maps/place/Montreal,+QC/)
