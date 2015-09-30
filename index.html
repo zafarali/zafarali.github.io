@@ -2,45 +2,41 @@
 layout: main
 title: Portfolio
 ---
+<div class="row">
 
+<div class="col-md-10 col-md-offset-1">
 <main id="portfolio" class="portfolio">
-	<section class="categories">
-		<small>
-			Showing you featured projects from... <br />
-			<a href="javascript:show_only('data-science');" id="tag-click-data-science">data-science</a> | 
-			<a href="javascript:show_only('research');" id="tag-click-research">research</a> | 
-			<a href="javascript:show_only('software');" id="tag-click-software">software</a> | 
-			<a href="javascript:show_only('talks');" id="tag-click-talks">talks</a> <br />
-			<small id="clear-button"><a href="javascript:clear_selection()">(clear)</a></small>
-		</small>
-	</section>	
+	
 	<section>
 		<ul class="portfolio-list">
-				{% for project in site.projects reversed %}
-				{% unless project.hidemain %}
-				<li class="portfolio-item item-tag-{{project.tag}}">
-					{% if project.externallink %}
-						<a href="{{ project.externallink }}" target="_blank">
-					{% else %}
-						<a href="{{ project.url }}">
-					{% endif %}
-						<div class="portfolio-thumbnail">
-							<img src="{{ site.image_path }}{{ project.image }}" class="img-responsive" />
-						</div>
-						<div class="portfolio-tag tag-{{project.tag}}">
-							{{project.tag}}
-						</div>
-						<h4 class="portfolio-title">
-								{{ project.title }} <br />
-								<small class="project-subtitle">{{project.subtitle}}</small>
-						</h4>
-						</a>
-					</li>
-					{% endunless %}
-				{% endfor %}
+			{% for project in site.projects reversed %}
+			{% unless project.hidemain %}
+			<li class="portfolio-item item-tag-{{project.tag}}">
+				{% if project.externallink %}
+					<a href="{{ project.externallink }}" target="_blank">
+				{% else %}
+					<a href="{{ project.url }}">
+				{% endif %}
+					<div class="portfolio-thumbnail">
+						<img src="{{ site.image_path }}{{ project.image }}" class="img-responsive" />
+					</div>
+					<div class="portfolio-tag tag-{{project.tag}}">
+						{{project.tag}}
+					</div>
+					<h4 class="portfolio-title">
+							{{ project.title }} <br />
+							<small class="project-subtitle">{{project.subtitle}}</small>
+					</h4>
+					</a>
+				</li>
+				{% endunless %}
+			{% endfor %}
 		</ul>
 	</section>
 	<section>
-		You're cool. Show me <a href="#all">more</a>.
+		You're cool. Show me <a href="{{ site.baseurl }}all/">more</a>.
 	</section>
 </main>
+
+</div>
+</div>

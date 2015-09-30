@@ -1,0 +1,70 @@
+---
+layout: main
+title: All Projects
+---
+
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+<main id="portfolio" class="portfolio">
+	<h2>
+	All projects
+	</h2>
+	<section class="categories">
+		<small>
+			Show all projects from... <br />
+			<a href="javascript:show_only('data-science');" id="tag-click-data-science">data-science</a> | 
+			<a href="javascript:show_only('research');" id="tag-click-research">research</a> | 
+			<a href="javascript:show_only('software');" id="tag-click-software">software</a> | 
+			<a href="javascript:show_only('talks');" id="tag-click-talks">talks</a> | 
+			<a href="javascript:show_only('random');" id="tag-click-random">random</a> <br />
+			<small id="clear-button"><a href="javascript:clear_selection()">(clear)</a></small>
+		</small>
+	</section>	
+
+	<section>
+
+	<ul class="all-project-list">
+	{% for project in site.projects reversed %}
+		<li class="project-item  item-tag-{{project.tag}}">
+			<span class="project-title">
+			{% if project.externallink %}
+				<a href="{{ project.externallink }}" target="_blank">
+			{% else %}
+				<a href="{{ project.url }}">
+			{% endif %}	
+
+			{{ project.title }}
+
+			</a></span>
+			/ <span class="project-tag">[{{ project.tag }}]</span> / 
+			<span class="project-date">{{ project.date }}</span> 
+			
+			<br />
+			<small>{{ project.subtitle }}</small>
+		</li>
+
+	{% endfor %}
+
+	</ul>
+
+	</section>
+
+</main>
+
+</div>
+</div>
+<script>
+	function show_only(tagname){
+		clear_selection()
+		$('.project-item:not(.item-tag-'+tagname+')').css('display', 'none');
+		$('#tag-click-'+tagname).css('font-weight', 'bold').css('text-decoration','underline');
+		$('#clear-button').css('visibility','visible');
+	}
+
+	function clear_selection(){
+		$('.project-item').css('display', 'block');
+		$('.categories a').css('font-weight', 'normal').css('text-decoration', 'none')
+		$('#clear-button').css('visibility', 'hidden');
+	}
+</script>

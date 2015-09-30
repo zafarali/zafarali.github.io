@@ -17,34 +17,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="{{site.baseurl}}public/scripts/bootstrap.min.js"></script>
 
-	<script>
-		function show_only(tagname){
-			clear_selection()
-			$('.portfolio-item:not(.item-tag-'+tagname+')').css('display', 'none');
-			$('#tag-click-'+tagname).css('font-weight', 'bold').css('text-decoration','underline');
-			$('#clear-button').css('visibility','visible');
-		}
-
-		function clear_selection(){
-			$('.portfolio-item').css('display', 'initial');
-			$('.categories a').css('font-weight', 'normal').css('text-decoration', 'none')
-			$('#clear-button').css('visibility', 'hidden');
-		}
-		// function remove_tag(tagname){
-		// 	$('.'+tagname).css('display', 'none');
-		// 	$('#showing #'+tagname).remove();
-		// }
-
-		// function add_tag(tagname){
-		// 	$('.'+tagname).css('display', 'initial');
-		// 	$('#showing').append('<a id="'+tagname+'" href="#">'+tagname+'</a>');
-		// }
-		// $(document).ready(function(){
-		// 	$('#showing').forEach(function(element){
-		// 		element.click( remove_tag(tagname) )
-		// 	})
-		// });
-	</script>
+	
 	<style>
 	body{
 		background-color: #fafafa;
@@ -85,6 +58,7 @@
     	flex-flow: row wrap;
    		list-style: none;
 	}
+
 	.portfolio-item {
 	    margin:0;
 	    padding:0;
@@ -189,6 +163,26 @@
 		text-align: center;
 		text-transform: uppercase;
 		margin-bottom: 10px;
+	}
+
+	.all-project-list{
+		list-style: none;
+	}
+
+	.all-project-list li{
+		margin-bottom:10px;
+	}
+	.project-date{
+		color:rgba(119, 119, 119,1);
+	}
+	.project-tag, .project-title{
+		color:#417B0E;
+	}
+	.project-tag{
+		text-transform: uppercase;
+	}
+	.project-title{
+		font-size:1.6em;
 	}
 /*	.navbar{
 		background-color:gray;

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Traveling Canadians
+title: Travelling Canadians
 date: March 2015
 subtitle: Bored during reading week, I used data from StatsCan to discover at what age Canadians travel most often throughout their lifetimes.
 image: /travel_can.png
