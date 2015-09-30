@@ -1,0 +1,208 @@
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of little projects and big experiences">
+    <meta name="author" content="Zafarali Ahmed">
+
+
+	<title>{{ site.title }}</title>
+
+    <link href="{{site.baseurl}}public/stylesheets/bootstrap.min.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css">
+	<!-- <link rel="icon" type="image/png" href="{{ site.baseurl }}/public/images/msr-student-template-favicon.png"> -->
+
+	<!-- <link rel="stylesheet" href="{{ site.baseurl }}public/stylesheets/style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="{{site.baseurl}}public/scripts/bootstrap.min.js"></script>
+
+	
+	<style>
+	body{
+		background-color: #fafafa;
+		font-family: 'Raleway', Helvetica, sans-serif;
+		color:#333333;
+	}
+	a {
+		color:#417B0E;
+	}
+	a:hover{
+		color:#6cbb27;
+	}
+
+	nav *{
+	    font-weight: 300;
+	    text-transform: uppercase;
+	}
+	.navbar {
+		margin-bottom: 0;
+	}
+	.navbar-toggle{
+		border:1px solid #417B0E;
+	}
+	.navbar-toggle .icon-bar{
+		background-color:#417B0E;
+	}
+
+	#clear-button{
+		visibility:hidden;
+	}
+	.portfolio-holder{
+		/*display:r;*/
+	}
+	.portfolio-list{
+		display: -webkit-flex; /*Safari */
+	    -webkit-flex-flow: row-reverse wrap;  /*Safari 6.1+ */
+	    display: flex;
+    	flex-flow: row wrap;
+   		list-style: none;
+	}
+
+	.portfolio-item {
+	    margin:0;
+	    padding:0;
+	    border:1px solid rgba(0,0,0,0);
+	}
+
+	@media screen and (min-width: 480px) {
+	    .portfolio-item {
+	        width: 50%;
+	    }
+	}
+	@media screen and (min-width: 768px) {
+	    .portfolio-item {
+	        width: 33.33%;
+	        margin-bottom: 1.5rem;
+	    }
+	}
+	@media screen and (min-width: 1280px) {
+	    .portfolio-item {
+	        width: 25%;
+	        margin-bottom: 2rem;
+	    }
+	}
+
+
+	.portfolio-thumbnail img{
+		/*color:rgba(0,0,0,0);*/
+		max-height: 200px;
+		min-height: 200px;
+		display: block;
+	    margin-left: auto;
+		margin-right: auto;
+	}
+	.portfolio-thumbnail{
+		-webkit-transition-duration: 0.25s;
+		transition-duration: 0.25s;
+	}
+	.portfolio-item:hover .portfolio-thumbnail{
+		-webkit-transform:-webkit-scale(1.1);
+		transform:scale(1.1);
+	}
+	.portfolio-title{
+		/*padding:3px;*/
+		text-align: center;
+		min-height: 50px;
+		font-weight: normal;
+	}
+
+
+	
+	.project-subtitle{
+		color:rgba(119, 119, 119,1);
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+
+
+	.portfolio-item *, .portfolio-item *:hover, .portfolio-item *:visited{
+		text-decoration: none;
+	}
+
+
+	.portfolio-contents .portfolio-tag{
+		padding-left: 2px;
+		padding-right:2px;
+		color:white;
+
+	}
+	.portfolio-tag{
+		padding-top: 10px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.portfolio-item:hover {
+		/*border:1px solid #6cbb27;*/
+	}
+	.tag-random{
+		/*nocoloryet*/
+	}
+	.tag-data-science{
+		/*background-color: green;*/
+	}
+	.tag-research{
+		/*background-color: red;*/
+	}
+	.tag-software{
+		/*background-color: blue;*/
+	}
+	.tag-talks{
+		/*background-color: pink;*/
+	}
+	.item-tag-random{
+		display: none;
+	}
+	.page-header{
+		margin-top: 0;
+	}
+	.button-holder .btn-group{
+		float:right;
+		display:block;
+	}
+
+	.categories{
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	.all-project-list{
+		list-style: none;
+	}
+
+	.all-project-list li{
+		margin-bottom:10px;
+	}
+	.project-date{
+		color:rgba(119, 119, 119,1);
+	}
+	.project-tag, .project-title{
+		color:#417B0E;
+	}
+	.project-tag{
+		text-transform: uppercase;
+	}
+	.project-title{
+		font-size:1.6em;
+	}
+/*	.navbar{
+		background-color:gray;
+	}*/
+
+	#social-links a, #social-links i{
+		display: inline-block;
+	}
+
+	#portrait{
+		float:right;
+		border-radius: 50%;
+	    width: 200px;
+	}
+	.row{
+		margin-left: 2px;
+		margin-right:2px;
+	}
+	</style>`
+</head>
