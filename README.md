@@ -1,6 +1,4 @@
-# Master of Science in Robotics Student Portfolio Template
-
-
+This website is based on the skeleton Jekyll set up at [Master of Science in Robotics Student Portfolio Template](https://github.com/jonrovira/msr-student-template). However, the design is HEAVILIY modified. I introduced bootstrap and some new features.
 
 ## Jekyll Overview
 
