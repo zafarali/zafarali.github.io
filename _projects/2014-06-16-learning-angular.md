@@ -6,7 +6,6 @@ image: /learning-angular.png
 tag: software
 subtitle: GitbHub respositiory I used to learn AngularJS to land my first software job. Now has 600+ stars.
 externallink: https://github.com/zafarali/learning-angular
-showmain: false
 ---
 
 ## Overview

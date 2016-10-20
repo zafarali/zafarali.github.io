@@ -6,4 +6,5 @@ image: /explore_intelligence.png
 externallink: https://github.com/zafarali/explore-intelligence
 tag: data-science
 subtitle: Repository being used to learn Machine Learning, Statistics and other skills related to the data driven world.
+hidemain: true
 ---
