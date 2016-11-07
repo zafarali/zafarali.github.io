@@ -6,5 +6,6 @@ subtitle: Bored during reading week, I used data from StatsCan to discover at wh
 image: /travel_can.png
 externallink: https://plot.ly/~iamzaf/212/at-what-age-do-canadians-travel/
 tag: data-science
+hidemain: true
 ---
 
