@@ -1,0 +1,478 @@
+:root {
+    --font-main: 'Merriweather', serif;
+    --color-bg: #fdfdfd;
+    --color-text: #333333;
+    --color-text-muted: #666;
+    --color-accent: #555;
+    --spacing-unit: 1.5rem;
+}
+
+/* Minimal Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    padding: var(--spacing-unit);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: calc(var(--spacing-unit) * 2);
+    border-top: 1px solid #eee;
+    padding-top: var(--spacing-unit);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+/* Site Navigation */
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4rem;
+}
+
+.site-title a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid #eee;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.social-links a {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+}
+
+/* Interactive About Section */
+.about-interactive {
+    margin-top: 2rem;
+}
+
+.about-sentence {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    max-width: 1100px;
+}
+
+.expand-trigger {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #6cbb27;
+    padding: 0 4px;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 400;
+    color: #417B0E;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px 4px 0 0;
+    display: inline;
+    line-height: inherit;
+}
+
+.expand-trigger:hover {
+    background-color: #f0fdf4;
+    color: #6cbb27;
+    border-bottom-width: 2px;
+}
+
+.expand-trigger.active {
+    background-color: #6cbb27;
+    color: white;
+    border-bottom-color: #6cbb27;
+}
+
+.expansion-container {
+    margin-top: 2rem;
+}
+
+.expansion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-out;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.expansion-content.active {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    border-top: 1px solid #eee;
+    margin: 2rem 0 4rem 0;
+}
+
+.expansion-inner {
+    min-height: 0;
+}
+
+.expansion-inner p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 3rem 0;
+    margin: 0;
+}
+
+/* Portrait */
+#portrait {
+    float: right;
+    margin: 0 0 2.5rem 3.5rem;
+    border-radius: 50%;
+    width: 250px;
+    max-width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .about-sentence {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+
+    #portrait {
+        float: none;
+        display: block;
+        margin: 0 auto 3rem;
+        width: 180px;
+    }
+}
+
+/* Selected Works Gallery Grid */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.work-tile {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-tile:hover {
+    transform: translateY(-4px);
+}
+
+.tile-image-wrapper {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.tile-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.work-tile:hover .tile-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.tile-info {
+    margin-top: 1rem;
+}
+
+.tile-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.tile-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-main);
+}
+
+/* Overlay / Modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    /* Allow clicking tiles behind */
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-card {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow-y: auto;
+    pointer-events: auto;
+    /* Block clicks on the card itself */
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.overlay.active .overlay-card {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--color-text);
+}
+
+.project-detail h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.project-meta {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.project-date {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.project-tag {
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: #f0f0f0;
+}
+
+.project-description {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay-card {
+        padding: 2rem;
+        height: 100vh;
+        max-height: 100vh;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Social Footer Styles */
+.social-footer {
+    margin-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none !important;
+    font-weight: 400;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}

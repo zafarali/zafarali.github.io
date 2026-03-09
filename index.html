@@ -2,41 +2,60 @@
 layout: main
 title: Portfolio
 ---
-<div class="row">
 
-<div class="col-md-10 col-md-offset-1">
 <main id="portfolio" class="portfolio">
-	
-	<section>
-		<ul class="portfolio-list">
+	{% include interactive-about.html %}
+
+	<section class="works-section">
+		<div class="works-grid">
 			{% for project in site.projects reversed %}
-			{% unless project.hidemain %}
-			<li class="portfolio-item item-tag-{{project.tag}}">
-				{% if project.externallink %}
-					<a href="{{ project.externallink }}" target="_blank">
-				{% else %}
-					<a href="{{ project.url }}">
-				{% endif %}
-					<div class="portfolio-thumbnail">
-						<img src="{{ site.image_path }}{{ project.image }}" class="img-responsive" />
+			{% if project.selected %}
+			<article class="work-tile" data-id="{{ project.slug }}">
+				<div class="tile-image-wrapper">
+					<img src="{{ project.tile_image }}" alt="{{ project.title }}">
+				</div>
+				<div class="tile-info">
+					<h3>{{ project.title }}</h3>
+				</div>
+
+				<template id="content-{{ project.slug }}">
+					<div class="project-detail">
+						<h3>{{ project.title }}</h3>
+						<div class="project-meta">
+							<span class="project-date">{{ project.date | date: "%Y" }}</span>
+						</div>
+						<p class="project-subtitle">{{ project.subtitle }}</p>
+						<div class="project-description">
+							{{ project.content | markdownify }}
+						</div>
+						{% if project.externallink %}
+						<a href="{{ project.externallink }}" target="_blank" class="project-link">View Project
+							&rarr;</a>
+						{% endif %}
 					</div>
-					<div class="portfolio-tag tag-{{project.tag}}">
-						{{project.tag}}
-					</div>
-					<h4 class="portfolio-title">
-							{{ project.title }} <br />
-							<small class="project-subtitle">{{project.subtitle}}</small>
-					</h4>
-					</a>
-				</li>
-				{% endunless %}
+				</template>
+			</article>
+			{% endif %}
 			{% endfor %}
-		</ul>
+		</div>
 	</section>
-	<section>
-		You're cool. Show me <a href="{{ site.baseurl }}all/">more</a>.
+
+	<section class="more-section">
+		<p>You're cool. Show me <a href="{{ site.baseurl }}all/">more</a>.</p>
+	</section>
+
+	<section class="social-footer">
+		<ul class="footer-links">
+			<li><a href="/assets/cv.pdf">CV</a></li>
+			<li><a href="http://ca.linkedin.com/in/zafaraliahmed">LinkedIn</a></li>
+			<li><a href="http://www.github.com/zafarali">GitHub</a></li>
+		</ul>
 	</section>
 </main>
 
-</div>
+<div id="work-overlay" class="overlay hidden">
+	<div class="overlay-card">
+		<button class="close-btn">&times;</button>
+		<div class="overlay-body"></div>
+	</div>
 </div>
