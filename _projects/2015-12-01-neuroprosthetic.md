@@ -6,5 +6,6 @@ subtitle: Framework and prototype for a Siri-like system that can automatically 
 image: /598neuro.png
 externallink: https://drive.google.com/file/d/0BwbIZeNSn5cdSW1RSWpGRzZRWkk/view?usp=sharing
 tag: research
+hidemain: true
 ---
 

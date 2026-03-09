@@ -6,5 +6,6 @@ subtitle: Created a pseudointelligent chat bot on Facebook Messenger to aid stud
 image: /minervabot.png
 externallink: http://m.me/minervabot
 tag: software
+hidemain: true
 ---
 
