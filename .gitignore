@@ -5,3 +5,5 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+plans/
+Gemfile.lock
