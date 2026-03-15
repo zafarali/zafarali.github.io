@@ -78,7 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetId = trigger.getAttribute('data-target');
         const targetContent = document.getElementById(targetId).querySelector('.expansion-inner');
         
-        if (backTrigger) backTrigger.style.pointerEvents = 'none';
+        if (backTrigger) {
+            backTrigger.style.pointerEvents = 'none';
+            backTrigger.classList.add('expanded');
+        }
         
         // FLIP: First
         const firstRect = trigger.getBoundingClientRect();
@@ -190,7 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isExpanded || !currentActiveTrigger) return;
         isExpanded = false;
         
-        if (backTrigger) backTrigger.style.pointerEvents = 'none';
+        if (backTrigger) {
+            backTrigger.style.pointerEvents = 'none';
+            backTrigger.classList.remove('expanded');
+        }
 
         const activeContainer = document.querySelector('.active-expansion');
         if (!activeContainer) return;

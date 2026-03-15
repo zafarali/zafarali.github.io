@@ -161,8 +161,13 @@ p {
     font-weight: 400;
     color: var(--color-text);
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     max-width: 1100px;
+}
+
+.about-sentence .back-trigger,
+.about-sentence .animating-intro-text {
+    display: block;
 }
 
 .expand-trigger {
@@ -203,11 +208,31 @@ p {
 .back-trigger {
     cursor: pointer;
     transition: opacity 0.2s ease, color 0.2s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 
 .back-trigger:hover {
     color: #6cbb27;
+}
+
+.back-arrow {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(10px) rotate(20deg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #999;
+}
+
+.back-trigger.expanded .back-arrow {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0) rotate(0deg);
+    margin-right: 12px;
 }
 
 /* Word animation classes */
