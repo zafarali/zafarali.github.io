@@ -189,40 +189,57 @@ p {
 }
 
 .expand-trigger.active {
-    background-color: #6cbb27;
-    color: white;
-    border-bottom-color: #6cbb27;
+    background-color: transparent !important;
+    color: #6cbb27 !important;
+    border-bottom-color: #6cbb27 !important;
 }
 
+/* Hide original expansion contents natively, JS pulls it automatically */
 .expansion-container {
-    margin-top: 2rem;
+    display: none;
 }
 
-.expansion-content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-out;
-    opacity: 0;
-    overflow: hidden;
+/* Resettable Back Trigger */
+.back-trigger {
+    cursor: pointer;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    display: inline-block;
 }
 
-.expansion-content.active {
-    grid-template-rows: 1fr;
+.back-trigger:hover {
+    color: #6cbb27;
+}
+
+/* Word animation classes */
+.word {
+    display: inline-block;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     opacity: 1;
-    border-top: 1px solid #eee;
-    margin: 2rem 0 4rem 0;
+    transform: scale(1);
+    white-space: pre-wrap;
 }
 
-.expansion-inner {
-    min-height: 0;
+.word-hide {
+    opacity: 0;
+    transform: scale(0.85);
 }
 
-.expansion-inner p {
+.animating-intro-text {
+    display: inline;
+}
+
+.active-expansion {
+    display: inline;
     font-size: 1.2rem;
     line-height: 1.8;
     color: #444;
-    padding: 3rem 0;
-    margin: 0;
+    font-family: var(--font-main);
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.expansion-p {
+    display: inline;
 }
 
 /* Portrait */
