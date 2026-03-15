@@ -5,8 +5,9 @@ title: Portfolio
 
 <main id="portfolio" class="portfolio">
 	<button id="back-to-top" class="back-link hidden" aria-label="Back to top">
-		<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-			<path d="M18 15l-6-6-6 6"/>
+		<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"
+			stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 15l-6-6-6 6" />
 		</svg>
 	</button>
 
@@ -14,9 +15,10 @@ title: Portfolio
 		{% include interactive-about.html %}
 		<div class="scroll-caret-wrapper">
 			<button id="scroll-to-works" class="scroll-caret" aria-label="Scroll to selected works">
-				<span class="caret-text">&lt; Selected Works &gt;</span>
-				<svg class="caret-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+				<span class="caret-text">Selected Works</span>
+				<svg class="caret-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+					stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
 				</svg>
 			</button>
 		</div>
@@ -50,13 +52,14 @@ title: Portfolio
 									<img src="{{ image.url }}" alt="{{ image.alt | default: project.title }}">
 								</div>
 								{% endfor %}
-								
+
 								{% if project.images.size > 1 %}
 								<button class="prev-slide" aria-label="Previous Slide">&#10094;</button>
 								<button class="next-slide" aria-label="Next Slide">&#10095;</button>
 								<div class="slide-dots">
 									{% for image in project.images %}
-									<span class="dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></span>
+									<span class="dot {% if forloop.first %}active{% endif %}"
+										data-index="{{ forloop.index0 }}"></span>
 									{% endfor %}
 								</div>
 								{% endif %}

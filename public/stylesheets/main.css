@@ -190,8 +190,8 @@ p {
 
 .expand-trigger.active {
     background-color: transparent !important;
-    color: #6cbb27 !important;
-    border-bottom-color: #6cbb27 !important;
+    color: var(--color-text) !important;
+    border-bottom-color: transparent !important;
 }
 
 /* Hide original expansion contents natively, JS pulls it automatically */
@@ -217,6 +217,10 @@ p {
     opacity: 1;
     transform: scale(1);
     white-space: pre-wrap;
+}
+
+a.word {
+    display: inline;
 }
 
 .word-hide {
