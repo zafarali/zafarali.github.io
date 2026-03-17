@@ -2,41 +2,113 @@
 layout: main
 title: Portfolio
 ---
-<div class="row">
 
-<div class="col-md-10 col-md-offset-1">
 <main id="portfolio" class="portfolio">
-	
-	<section>
-		<ul class="portfolio-list">
-			{% for project in site.projects reversed %}
-			{% unless project.hidemain %}
-			<li class="portfolio-item item-tag-{{project.tag}}">
-				{% if project.externallink %}
-					<a href="{{ project.externallink }}" target="_blank">
-				{% else %}
-					<a href="{{ project.url }}">
-				{% endif %}
-					<div class="portfolio-thumbnail">
-						<img src="{{ site.image_path }}{{ project.image }}" class="img-responsive" />
-					</div>
-					<div class="portfolio-tag tag-{{project.tag}}">
-						{{project.tag}}
-					</div>
-					<h4 class="portfolio-title">
-							{{ project.title }} <br />
-							<small class="project-subtitle">{{project.subtitle}}</small>
-					</h4>
-					</a>
-				</li>
-				{% endunless %}
-			{% endfor %}
-		</ul>
+	<button id="back-to-top" class="back-link hidden" aria-label="Back to top">
+		<svg viewBox="20 20 70 60" width="20" height="20" stroke="currentColor" stroke-width="9" fill="none"
+			stroke-linecap="round" stroke-linejoin="round">
+			<!-- A Simple Curve -->
+			<path d="M 30 70 C 80 80, 100 50, 30 30" />
+			<!-- The Arrow Head -->
+			<polyline points="40,50 30, 30 60,20" />
+		</svg>
+	</button>
+
+	<section class="landing-hero" id="landing">
+		{% include interactive-about.html %}
+		<div class="scroll-caret-wrapper">
+			<button id="scroll-to-works" class="scroll-caret" aria-label="Scroll to selected works">
+				<span class="caret-text"><svg viewBox="20 20 50 60" width="24" height="24" fill="none"
+						stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+						class="caret-icon">
+						<!-- Downward Right Curve -->
+						<path d="M 60 30 C 40 20, 0 50, 75 70" />
+
+						<!-- Downward Right Arrow Head -->
+						<polyline points="65,55 75,70 55,75" />
+					</svg> Selected Works</span>
+				<!-- <svg class="caret-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+					stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+				</svg> -->
+
+			</button>
+		</div>
 	</section>
-	<section>
-		You're cool. Show me <a href="{{ site.baseurl }}all/">more</a>.
+
+	<section id="works" class="works-section">
+		<div class="works-grid">
+			{% for project in site.projects reversed %}
+			{% if project.selected %}
+			<article class="work-tile" data-id="{{ project.slug }}">
+				<div class="tile-image-wrapper">
+					<img src="{{ project.tile_image }}" alt="{{ project.title }}">
+				</div>
+				<div class="tile-info">
+					<h3>{{ project.title }}</h3>
+				</div>
+
+				<template id="content-{{ project.slug }}">
+					<div class="project-detail">
+						<div class="project-header">
+							<h3>{{ project.title }}</h3>
+							<span class="project-date">{{ project.date | date: "%Y" }}</span>
+						</div>
+						<p class="project-subtitle">{{ project.subtitle }}</p>
+
+						{% if project.images and project.images.size > 0 %}
+						<div class="project-slideshow" data-slideshow-id="{{ project.slug }}">
+							<div class="slideshow-container">
+								{% for image in project.images %}
+								<div class="slide fade {% if forloop.first %}active{% endif %}">
+									<img src="{{ image.url }}" alt="{{ image.alt | default: project.title }}">
+								</div>
+								{% endfor %}
+
+								{% if project.images.size > 1 %}
+								<button class="prev-slide" aria-label="Previous Slide">&#10094;</button>
+								<button class="next-slide" aria-label="Next Slide">&#10095;</button>
+								<div class="slide-dots">
+									{% for image in project.images %}
+									<span class="dot {% if forloop.first %}active{% endif %}"
+										data-index="{{ forloop.index0 }}"></span>
+									{% endfor %}
+								</div>
+								{% endif %}
+							</div>
+						</div>
+						{% endif %}
+						<div class="project-description">
+							{{ project.content | markdownify }}
+						</div>
+						{% if project.externallink %}
+						<a href="{{ project.externallink }}" target="_blank" class="project-link">View Project
+							&rarr;</a>
+						{% endif %}
+					</div>
+				</template>
+			</article>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+
+	<!-- <section class="more-section">
+		<p>You're cool. Show me <a href="{{ site.baseurl }}all/">more</a>.</p>
+	</section> -->
+
+	<section class="social-footer">
+		<ul class="footer-links">
+			<li><a href="/assets/cv.pdf">CV</a></li>
+			<li><a href="http://ca.linkedin.com/in/zafaraliahmed">LinkedIn</a></li>
+			<li><a href="http://www.github.com/zafarali">GitHub</a></li>
+		</ul>
 	</section>
 </main>
 
-</div>
+<div id="work-overlay" class="overlay hidden">
+	<div class="overlay-card">
+		<button class="close-btn">&times;</button>
+		<div class="overlay-body"></div>
+	</div>
 </div>
